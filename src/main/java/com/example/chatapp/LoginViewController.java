@@ -29,6 +29,7 @@ public class LoginViewController {
         {
 
             username = user_tf.getText();
+            user_tf.clear();
             Platform.runLater(()->{
 
                 try {

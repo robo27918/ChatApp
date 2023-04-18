@@ -55,26 +55,26 @@ public class ChatViewController {
 
         try{
             // this just updates the view locally but we still need to get this message out to the server
-            String currTime = getCurrentTime();
-            String message_str = "[" + username + "] " + currTime + ": " + message_ta.getText();
-            //System.out.println(message_str);
-            //messages_observable_list.add(message_str);
-            //message_list.setItems(messages_observable_list);
-            if (entered_chat)
-            {
-
+            if (!message_ta.getText().isBlank()) {
+                String currTime = getCurrentTime();
+                String message_str = "[" + username + "] " + currTime + ": " + message_ta.getText();
                 //System.out.println(message_str);
                 //messages_observable_list.add(message_str);
                 //message_list.setItems(messages_observable_list);
-                client.sendMessage(message_str);
+                if (entered_chat) {
 
+                    //System.out.println(message_str);
+                    //messages_observable_list.add(message_str);
+                    //message_list.setItems(messages_observable_list);
+                    client.sendMessage(message_str);
+
+                } else {
+                    entered_chat = !entered_chat;
+                    client.sendMessage(this.username);
+                    client.sendMessage(message_str);
+                }
+                message_ta.clear();
             }
-            else{
-                entered_chat = !entered_chat;
-                client.sendMessage(this.username);
-                client.sendMessage(message_str);
-            }
-            message_ta.clear();
         }
         catch(Exception e){
             e.printStackTrace();
