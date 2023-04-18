@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatapp.LoginViewController">
+   <children>
+      <Button fx:id="login_button" layoutX="175.0" layoutY="252.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="0.0" prefWidth="208.0" text="Login" />
+      <TextField fx:id="user_tf" layoutX="181.0" layoutY="135.0" prefHeight="26.0" prefWidth="208.0" promptText="Enter username" />
+      <Label layoutX="75.0" layoutY="140.0" prefHeight="17.0" prefWidth="72.0" text="Username" />
+      <Label layoutX="216.0" layoutY="68.0" prefHeight="34.0" prefWidth="159.0" text="Bronco Chat">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="error_label" layoutX="195.0" layoutY="191.0" prefHeight="26.0" prefWidth="134.0" textFill="#c90c0c" />
+   </children>
+</AnchorPane>
