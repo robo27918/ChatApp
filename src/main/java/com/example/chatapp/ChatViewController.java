@@ -85,6 +85,7 @@ public class ChatViewController {
         client.sendMessage( currTime +": " + "User has said goodbye...");
         client.closeOnExit();
         this.socket.close();
+        System.exit(0); // will this close the app?
     }
 
     //utility method to get the current time for time stamps on messages
