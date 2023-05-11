@@ -3,19 +3,36 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatapp.LoginViewController">
+<AnchorPane prefHeight="400.0" prefWidth="554.0" style="-fx-background-color: seagreen;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatapp.LoginViewController">
    <children>
-      <Button fx:id="login_button" layoutX="175.0" layoutY="252.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="0.0" prefWidth="208.0" text="Login" />
-      <TextField fx:id="user_tf" layoutX="181.0" layoutY="135.0" prefHeight="26.0" prefWidth="208.0" promptText="Enter username" />
-      <Label layoutX="75.0" layoutY="140.0" prefHeight="17.0" prefWidth="72.0" text="Username" />
-      <Label layoutX="216.0" layoutY="68.0" prefHeight="34.0" prefWidth="159.0" text="Bronco Chat">
+      <Button fx:id="login_button" layoutX="181.0" layoutY="322.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="35.0" prefWidth="173.0" style="-fx-background-color: yellow;" text="Login">
          <font>
-            <Font name="System Bold Italic" size="28.0" />
-         </font>
-      </Label>
+            <Font name="Apple LiGothic Medium" size="23.0" />
+         </font></Button>
+      <TextField fx:id="user_tf" layoutX="220.0" layoutY="278.0" prefHeight="26.0" prefWidth="208.0" promptText="Enter username">
+         <font>
+            <Font name="Apple LiGothic Medium" size="18.0" />
+         </font></TextField>
+      <Label layoutX="108.0" layoutY="277.0" prefHeight="28.0" prefWidth="111.0" text="Username:" textFill="WHITE">
+         <font>
+            <Font name="Apple LiGothic Medium" size="26.0" />
+         </font></Label>
       <Label fx:id="error_label" layoutX="195.0" layoutY="191.0" prefHeight="26.0" prefWidth="134.0" textFill="#c90c0c" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="197.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../cpp.png" />
+         </image>
+      </ImageView>
+      <Text fill="#fbff00" layoutX="134.0" layoutY="97.0" strokeType="OUTSIDE" text="BroncoChat" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Apple LiGothic Medium" size="67.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
